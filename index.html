@@ -1,325 +1,300 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0//EN">
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-    <title>miurror's works</title>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>miurror's works — Makoto Miura</title>
+<meta name="description" content="三浦真人 (Makoto Miura) の研究ページ。代数幾何の論文・講演・ノートと、数学にまつわる可視化アプリ。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#fbfaf7; --bg2:#f3f1ea; --ink:#1c1b19; --ink2:#55524c; --ink3:#8a867d;
+  --line:#e4e0d6; --card:#ffffff; --accent:#3a5a40; --accent2:#a3603a;
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --sans:'Inter','Noto Sans JP',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased}
 
-    <style type="text/css">
-      body {
-        margin: 0px 0px 0px 0px;
-        padding: 0;
-        color: #000033; 
-        background-color: #f1f1f1;
-      }
-      #wrapper {width:950px; height: 3400px; margin: 30px 0px 0px 60px;}
+/* language switching */
+[lang="en"] .ja{display:none}
+[lang="ja"] .en{display:none}
 
-      #title {width:900px; margin:30px 0px 0px 30px;
-      font-family:Georgia, Times, Times New Roman, serif; font-size:25px; float:left;}
-      #title > p  {padding-left:30px; margin:0px 0px 5px 0px;}
+.wrap{max-width:860px;margin:0 auto;padding:0 28px}
 
-      #works {width:900px;  margin:0px 0px 0px 0px;
-      padding-left:30px; font-family: Helvetica Neue, Arial, sans-serif;
-      font-size:16px; float:left; line-height:1.4;}
-      #works > p  {padding-left:30px;}
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;padding:26px 0 0}
+.mark{font-size:15px;letter-spacing:.04em;color:var(--ink2)}
+.mark a{color:inherit;text-decoration:none}
+.mark a:hover{color:var(--ink)}
+.lang{background:none;border:1px solid var(--line);color:var(--ink2);font-family:var(--sans);
+  font-size:12px;letter-spacing:.08em;padding:6px 12px;border-radius:999px;cursor:pointer;transition:.2s}
+.lang:hover{border-color:var(--ink3);color:var(--ink)}
 
-      ul li {margin-bottom: 13px;}
-      ul .inner li {margin: 5px 0px 0px 0px;}
-      a {text-decoration:none; color: blue;}
-      a:hover {text-decoration:underline; color: red;}
-    </style>
-  </head>
+/* hero */
+.hero{padding:58px 0 40px;border-bottom:1px solid var(--line)}
+.title{font-family:var(--serif);font-weight:600;line-height:1.1;letter-spacing:-.01em;font-size:clamp(30px,5vw,44px)}
+.byname{margin-top:12px;font-size:13.5px;color:var(--ink3);letter-spacing:.04em}
+.lead{margin-top:22px;font-size:16px;color:var(--ink2);max-width:36em}
 
-  <body>
-  <div id="wrapper">
-    <div id="title">
-      <h1>miurror's works</h1>
-    </div>
+/* section */
+section{padding:50px 0;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:none}
+h2{font-family:var(--serif);font-weight:600;font-size:28px;letter-spacing:-.01em;margin-bottom:26px}
 
-    <div id = "works">
-      <div id="papers">
-        <h2>Research Papers</h2>
-        <ul>
-          <li id="excCY">
-            <em>Calabi&ndash;Yau complete intersections in exceptional Grassmannians</em>,<br>
-            (with Atsushi Ito, Shinnosuke Okawa, and Kazushi Ueda). <br>
-            <a href="https://arxiv.org/abs/1606.04076" target="_blank" rel="noopener noreferrer">arXiv:1606.04076v4 [math.AG] (2022)</a>
-          </li>
-          <li id="reflexive">
-            <em>The web of reflexive polygons is connected</em>,<br>
-            <a href="https://arxiv.org/abs/2207.01632" target="_blank" rel="noopener noreferrer">
-              arXiv:2207.01632 [math.AG] (2022)
-            </a>
-          </li>
-          <li id="spherical">
-            <em>Spherical 2-designs as stationary points of many-body systems</em>,<br>
-            (with Kazushi Ueda).<br>
-            <a href="https://link.springer.com/article/10.1007/s00373-020-02259-5" target="_blank" rel="noopener noreferrer">
-              Graphs and Combinatorics <b>37</b>, pp.485&ndash;492 (2020)
-            </a>
-          </li>
-          <li id="ann2_DLAV">
-            <em>Derived equivalence and Grothendieck ring of varieties: the case of K3 surfaces of degree 12 and abelian varieties</em>, <br>
-            (with Atsushi Ito, Shinnosuke Okawa, and Kazushi Ueda). <br>
-            <a href="https://link.springer.com/article/10.1007/s00029-020-00561-x" target="_blank" rel="noopener noreferrer">
-              Selecta Mathematica <b>26</b>, Article number: 38, 27 pages (2020)
-            </a>
-          </li>
-          <li id="smoothing">
-            <em>Complete intersection Calabi&ndash;Yau threefolds in Hibi toric varieties and their smoothing</em>, <br>
-            <a href="./articles/hibi_smoothing.pdf" target="_blank">
-              PDF</a>&nbsp;
-            <a href="https://www.worldscientific.com/doi/abs/10.1142/9789811200489_0018" target="_blank" rel="noopener noreferrer">
-              Algebraic and Geometric Combinatorics on Lattice Polytopes, pp.280&ndash;295 (2019)
-            </a>
-          </li>
-          <li id="reconstruction">
-            <em>Projective reconstruction in algebraic vision</em>, <br>
-            (with Atsushi Ito, and Kazushi Ueda). <br>
-            <a href="https://www.cambridge.org/core/journals/canadian-mathematical-bulletin/article/projective-reconstruction-in-algebraic-vision/26FB870678ABDDCBC7120A248C162A6E" target="_blank" rel="noopener noreferrer">
-              Canadian Mathematical Bulletin <b>63</b>, Issue 3, pp.592&ndash;609 (2020),
-            </a> (published online: 2019)
-          </li>
-          <li id="classification">
-            <em>Complete intersection Calabi&ndash;Yau manifolds with respect to homogeneous vector bundles on Grassmannians</em>,<br>
-            (with Daisuke Inoue, and Atsushi Ito). <br> 
-            <a href="https://link.springer.com/article/10.1007/s00209-018-2163-5" target="_blank" rel="noopener noreferrer">
-              Mathematische Zeitschrift <b>292</b>, pp.677&ndash;703 (2019),
-            </a> (published: 2018)
-          </li>
-          <li id="annihilator">
-            <em>The class of the affine line is a zero divisor in the Grothendieck ring: via G_2-Grassmannians</em>,<br>
-            (with Atsushi Ito, Shinnosuke Okawa, and Kazushi Ueda). <br>
-            <a href="https://www.ams.org/journals/jag/2019-28-02/S1056-3911-2018-00731-3/" target="_blank" rel="noopener noreferrer">
-             Journal of Algebraic Geometry <b>28</b>, pp.245&ndash;250 (2019),
-            </a> (published electronically: 2018)
-          </li>
-          <li id="minuscule">
-            <em>Minuscule Schubert varieties and mirror symmetry</em>,<br>
-            <a href="https://www.emis.de/journals/SIGMA/2017/067/" target="_blank" rel="noopener noreferrer">
-             Symmetry, Integrability and Geometry: Methods and Applications (SIGMA) <b>13</b>, 067, 25 pages (2017)
-            </a>
-          </li>
-          <li id="I-function">
-            <em>I-functions of Calabi&ndash;Yau 3-folds in Grassmannians</em>,<br>
-            (with Daisuke Inoue, and Atsushi Ito). <br>
-            <a href="https://intlpress.com/site/pub/pages/journals/items/cntp/content/vols/0011/0002/a002/index.php" target="_blank" rel="noopener noreferrer">
-              Communications in Number Theory and Physics <b>11</b>, no. 2, pp.273&ndash;309 (2017)
-            </a>
-          </li>
-          <li id="seshadri">
-            <em>Seshadri constants and degree of defining polynomials</em>,<br>
-            (with Atsushi Ito). <br>
-            <a href="https://link.springer.com/article/10.1007/s00208-013-0969-3" target="_blank" rel="noopener noreferrer">
-              Mathematische Annalen <b>358</b>, pp.465&ndash;476 (2014),
-            </a> (published: 2013)
-          </li>
-        </ul>
-      </div>
+/* visualization cards */
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+@media(max-width:720px){.cards{grid-template-columns:1fr}}
+.card{position:relative;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);
+  border-radius:16px;padding:24px 22px 20px;text-decoration:none;color:inherit;overflow:hidden;
+  transition:transform .25s cubic-bezier(.22,.61,.36,1),box-shadow .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(28,27,25,.32);border-color:#d6d1c4}
+.card .bar{position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--accent)}
+.card .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--ink3)}
+.card h3{font-family:var(--serif);font-weight:600;font-size:21px;margin:12px 0 8px;line-height:1.2}
+.card p{font-size:13.5px;color:var(--ink2);flex:1}
+.card .go{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:13px;font-weight:600;color:var(--accent)}
+.card .go svg{transition:transform .25s}
+.card:hover .go svg{transform:translateX(4px)}
 
-      <div id="documents">
-        <h2>Documents</h2>
-        <ul>
-          <li id="mathsoc2023">
-            <strong>多面体の大域連結性について</strong>, <br>
-            日本数学会秋季総合分科会, 東北大学, 2023年9月20&ndash;23日.<br> 
-            <ul class="inner">
-              <li>
-                講演アブストラクト:
-                <a href="./articles/msj2023_abstract.pdf" target="_blank">
-                  PDF (in Japanese)
-                </a>
-              </li>
-              <li>
-                スライド:
-                  PDF (in Japanese)
-              </li>
-            </ul>
-          </li>
-          <li id="mathsoc2022">
-            <em>Calabi&ndash;Yau</em> <strong>超曲面の幾何転移</strong>, <br> 
-            日本数学会秋季総合分科会, 北海道大学, 2022年9月15日.<br> 
-            <ul class="inner">
-              <li>
-                講演アブストラクト:
-                <a href="./articles/msj2022_abstract.pdf" target="_blank">
-                  PDF (in Japanese)
-                </a>
-              </li>
-              <li>
-                スライド:
-                <a href="./articles/msj2022_slide.pdf" target="_blank">
-                  PDF (in Japanese)
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li id="kinosaki2021">
-            <strong>カラビ・ヤウ超曲面の幾何転移</strong>,<br>
-            代数幾何学シンポジウム記録, pp.102&ndash;118, 正誤表連結済み (2023):
-            <a href="./articles/kinosaki2021_concatenated.pdf" target="_blank">
-              PDF (in Japanese)
-            </a>
-            <ul class="inner">
-              <li>
-                <a href="https://repository.kulib.kyoto-u.ac.jp/dspace/handle/2433/267781" target="_blank" rel="noopener noreferrer"> 
-                  Symposium on algebraic geometry (Kinosaki, 2021), pp.102&ndash;118,
-                </a>
-              </li>
-              <li>
-                正誤表 (2023):
-                <a href="./articles/kinosaki_erratum.pdf" target="_blank">
-                  PDF (in Japanese)
-                </a> 
-              </li>
-            </ul>
-          </li>
-          <li id="rims2021">
-            <strong>カメラと代数幾何学</strong>, <br>
-            第33回数学カフェ, 2021年3月7日,
-            <ul class="inner">
-              <li>
-                講演概要:
-                <a href="./articles/mathcafe_abstract.pdf" target="_blank">
-                  PDF (in Japanese)
-                </a>
-              </li>
-              <li>
-                講演ノート (手書き, 2022年7月8日改訂):
-                <a href="./articles/mathcafe_notes.pdf" target="_blank">
-                  PDF (in Japanese)
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li id="rims2021">
-            <strong>カメラの幾何学と再構成問題</strong>, <br>
-            <a href="https://miurror.github.io/articles/rims2021.pdf">
-              PDF (in Japanese)</a> &nbsp; 
-            <a href="https://www.kurims.kyoto-u.ac.jp/~kyodo/kokyuroku/contents/2186.html" target="_blank" rel="noopener noreferrer">
-              数理解析研究所講究録 <b>2186</b>, pp.61&ndash;74 (2021)
-            </a>
-          </li>
-          <li id="hodge">
-            <em>Exploratory Data: Hodge Number Plots</em> (since 2020), <br>
-            <ul class="inner">
-              <li>
-                30108 Hodge number data from 
-                <a href="https://arxiv.org/abs/hep-th/0002240" target="_blank" rel="noopener noreferrer">
-                [Kreuzer&ndash;Skarke 2000]</a> color-coded by half-Euler number parity: 
-                <a href="./articles/hodge.pdf" target="_blank">
-                  PDF</a>  
-              </li>
-              <li>
-                frequency of reflexive polytopes over Kreuzer&ndash;Skarke's Hodge number data:
-                <a href="./articles/frequency_of_reflexive_polytopes.pdf" target="_blank">
-                  PDF</a>  
-              </li>
-              <li>
-                266 (partially missing) Hodge number data from 
-                <a href="https://link.springer.com/article/10.1007/BF02097661" target="_blank" rel="noopener noreferrer">[He&ndash;Candelas 1990]</a>
-                plotted over Kreuzer&ndash;Skarke's data: 
-                <a href="./articles/hodgeKSvsCI.pdf" target="_blank">
-                  PDF</a>  
-              </li>
-              <li>
-                389 Hodge number data from 
-                <a href="https://projecteuclid.org/journals/advances-in-theoretical-and-mathematical-physics/volume-14/issue-3/Constructing-new-Calabi-Yau-3-folds-and-their-mirrors-via/atmp/1309526468.full"  target="_blank" rel="noopener noreferrer"> 
-                  [Batyrev&ndash;Kreuzer 2010]</a> 
-                plotted over Kreuzer&ndash;Skarke's data: 
-                <a href="./articles/hodgeKSvsConi.pdf" target="_blank">
-                  PDF</a>  
-              </li>
-            </ul>
-          </li>
-          <li id="KMS_DMV">
-            <em>Multiview varieties and reconstruction problems</em>, <br>
-            Joint meeting of the Korean Mathematical Society and the German Mathematical Society, COEX, Seoul, Oct. 6, 2018,
-            slide (revised: Oct. 15, 2018): 
-            <a href="./articles/KMS-DMV_slide.pdf" target="_blank"> 
-              PDF
-            </a>
-          </li>
-          <li id="kinosaki2014">
-            <em>Linear section Calabi&ndash;Yau threefolds in Hibi toric varieties</em>,<br>
-              <a href="https://repository.kulib.kyoto-u.ac.jp/dspace/handle/2433/214743" target="_blank" rel="noopener noreferrer">
-                Symposium on algebraic geometry (Kinosaki, 2014), p.125</a><br>
-              poster: 
-              <a href="./articles/kinosaki2014.pdf" target="_blank">
-                PDF
-              </a> 
-          </li>
-          <li id="hibi">
-            <em>Hibi toric varieties and mirror symmetry</em>, <br>
-            PhD Thesis (2013),
-            <ul class="inner">
-              <li>
-                thesis:
-                <a href="./articles/phd_thesis.pdf" target="_blank"> 
-                  PDF
-                </a>
-              </li>
-              <li>
-                論文の内容の要旨:
-                <a href="./articles/phd_thesis_abstract.pdf" target="_blank">
-                  PDF (in Japanese)
-                </a> 
-              </li>
-            </ul>
-          </li>
-          <li id="kinosaki2011">
-            <em>Mirror symmetry for complete intersection Calabi&ndash;Yau threefolds in Gorenstein minuscule Schubert varieties</em>,<br>
-              <a href="https://repository.kulib.kyoto-u.ac.jp/dspace/handle/2433/214740" target="_blank" rel="noopener noreferrer">
-                Symposium on algebraic geometry (Kinosaki, 2011), p.158</a><br>
-              poster: 
-              <a href="./articles/kinosaki2011.pdf" target="_blank">
-                PDF
-              </a> 
-          </li>
-          <li id="grassmann">
-            <em>Grassmann</em> <strong>多様体のトーリック退化とミラー対称性</strong>,<br>
-             修士論文 (2010): 
-              <a href="./articles/master_thesis.pdf" target="_blank">
-                PDF (in Japanese)
-              </a> 
-          </li>
-        </ul>
-      </div>
+/* works list */
+.list{list-style:none}
+.list > li{padding:18px 0;border-bottom:1px solid var(--line)}
+.list > li:first-child{padding-top:0}
+.list > li:last-child{border-bottom:none}
+.list em{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--ink);font-weight:400}
+.list strong{font-weight:600;color:var(--ink)}
+.byline{color:var(--ink2);font-size:14.5px}
+.venue{font-size:14.5px}
+.inner{list-style:none;margin:8px 0 0 0;padding-left:16px;border-left:2px solid var(--line)}
+.inner li{font-size:14px;color:var(--ink2);margin:6px 0}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;color:var(--accent2)}
+.note{color:var(--ink3);font-size:13px}
 
-      <div id = "apps">
-        <h2>Software & Web Applications</h2>
-        <ul>
-          <li id="solocat">
-            Solo-Cat (browser game)
-            <ul class="inner">
-            </ul>
-          </li>
-        </ul>
-      </div>
+footer{padding:34px 0 56px;font-size:13px;color:var(--ink3)}
+.backtop{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;padding:8px 14px;color:var(--ink2);background:#fffaf0}
+.backtop:hover{color:var(--ink);border-color:#d6d1c4;text-decoration:none}
+</style>
+<script>
+// Default to English for non-Japanese browsers (runs before render — no flash)
+(function(){
+  var l=((navigator.languages&&navigator.languages[0])||navigator.language||'').toLowerCase();
+  if(l.indexOf('ja')!==0) document.documentElement.setAttribute('lang','en');
+})();
+</script>
+</head>
 
-      <div id="materials">
-        <h2>Materials unrelated to mathematics</h2>
-        <ul>
-          <li id="recipe">
-            <em>Japanese Recipes</em> (at the KIAS Cooking Club, 2018),
-            <ul class="inner">
-              <li>
-                Gyoza (餃子):
-                <a href="./articles/gyoza.pdf" target="_blank"> 
-                  PDF
-                </a>
-              </li>
-              <li>
-                Tonjiru and Yaki-Onigiri (豚汁・焼きおにぎり):
-                <a href="./articles/tonjiru_yakionigiri.pdf" target="_blank"> 
-                  PDF
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+<body id="top">
+<div class="wrap">
 
-    </div>
+  <div class="top">
+    <div class="mark"><a href="https://miurror.net/">&larr; miurror.net</a></div>
+    <button class="lang" onclick="toggleLang()"><span class="ja">EN</span><span class="en">日本語</span></button>
   </div>
-  </body>
+
+  <header class="hero">
+    <h1 class="title">miurror's works</h1>
+    <p class="byname"><span class="ja">三浦 真人 &middot; Makoto Miura</span><span class="en">Makoto Miura</span></p>
+    <p class="lead">
+      <span class="ja">研究に関連する可視化、研究論文・講演スライド・ノート等をまとめています。</span>
+      <span class="en">A collection of research-related visualizations, research papers, talk slides, notes, and more.</span>
+    </p>
+  </header>
+
+  <!-- ===================== Visualizations ===================== -->
+  <section id="visualizations">
+    <h2><span class="ja">可視化</span><span class="en">Visualizations</span></h2>
+    <div class="cards">
+
+      <a class="card" href="https://miurror.net/hodgeplot/" target="_blank" rel="noopener noreferrer">
+        <span class="bar"></span>
+        <span class="tag">Calabi&ndash;Yau</span>
+        <h3>HodgePlot</h3>
+        <p>
+          <span class="ja">Calabi&ndash;Yau 3-folds の不変量データを描画。</span>
+          <span class="en">Plots of invariant data for Calabi&ndash;Yau threefolds.</span>
+        </p>
+        <span class="go">
+          <span class="ja">ひらく</span><span class="en">Open</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h9M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+
+      <a class="card" href="https://miurror.net/solocat/" target="_blank" rel="noopener noreferrer">
+        <span class="bar"></span>
+        <span class="tag"><span class="ja">ゲーム</span><span class="en">Game</span></span>
+        <h3>Solo-Cat</h3>
+        <p>
+          <span class="ja">反射的多角形を改築するパズルゲーム。</span>
+          <span class="en">A puzzle game about renovating reflexive polygons.</span>
+        </p>
+        <span class="go">
+          <span class="ja">あそぶ</span><span class="en">Play</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h9M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ===================== Research Papers ===================== -->
+  <section id="papers">
+    <h2><span class="ja">研究論文</span><span class="en">Research Papers</span></h2>
+    <ul class="list">
+      <li id="reflexive">
+        <em>The web of reflexive polygons is connected</em>,<br>
+        <span class="venue"><a href="https://arxiv.org/abs/2207.01632" target="_blank" rel="noopener noreferrer">arXiv:2207.01632 [math.AG] (2022)</a></span>
+      </li>
+      <li id="excCY">
+        <em>Calabi&ndash;Yau complete intersections in exceptional Grassmannians</em>,<br>
+        <span class="byline">(with Atsushi Ito, Shinnosuke Okawa, and Kazushi Ueda).</span><br>
+        <span class="venue"><a href="https://link.springer.com/chapter/10.1007/978-981-95-0385-8_5" target="_blank" rel="noopener noreferrer">Categorical and Enumerative Aspects of Mirror Symmetry, KIAS Springer Series in Mathematics <b>5</b>, pp.103&ndash;115 (2026)</a></span>
+      </li>
+      <li id="spherical">
+        <em>Spherical 2-designs as stationary points of many-body systems</em>,<br>
+        <span class="byline">(with Kazushi Ueda).</span><br>
+        <span class="venue"><a href="https://link.springer.com/article/10.1007/s00373-020-02259-5" target="_blank" rel="noopener noreferrer">Graphs and Combinatorics <b>37</b>, pp.485&ndash;492 (2020)</a></span>
+      </li>
+      <li id="ann2_DLAV">
+        <em>Derived equivalence and Grothendieck ring of varieties: the case of K3 surfaces of degree 12 and abelian varieties</em>,<br>
+        <span class="byline">(with Atsushi Ito, Shinnosuke Okawa, and Kazushi Ueda).</span><br>
+        <span class="venue"><a href="https://link.springer.com/article/10.1007/s00029-020-00561-x" target="_blank" rel="noopener noreferrer">Selecta Mathematica <b>26</b>, Article number: 38, 27 pages (2020)</a></span>
+      </li>
+      <li id="smoothing">
+        <em>Complete intersection Calabi&ndash;Yau threefolds in Hibi toric varieties and their smoothing</em>,<br>
+        <span class="venue"><a href="./articles/hibi_smoothing.pdf" target="_blank">PDF</a>&nbsp;
+        <a href="https://www.worldscientific.com/doi/abs/10.1142/9789811200489_0018" target="_blank" rel="noopener noreferrer">Algebraic and Geometric Combinatorics on Lattice Polytopes, pp.280&ndash;295 (2019)</a></span>
+      </li>
+      <li id="reconstruction">
+        <em>Projective reconstruction in algebraic vision</em>,<br>
+        <span class="byline">(with Atsushi Ito, and Kazushi Ueda).</span><br>
+        <span class="venue"><a href="https://www.cambridge.org/core/journals/canadian-mathematical-bulletin/article/projective-reconstruction-in-algebraic-vision/26FB870678ABDDCBC7120A248C162A6E" target="_blank" rel="noopener noreferrer">Canadian Mathematical Bulletin <b>63</b>, Issue 3, pp.592&ndash;609 (2020)</a>, <span class="note">(published online: 2019)</span></span>
+      </li>
+      <li id="classification">
+        <em>Complete intersection Calabi&ndash;Yau manifolds with respect to homogeneous vector bundles on Grassmannians</em>,<br>
+        <span class="byline">(with Daisuke Inoue, and Atsushi Ito).</span><br>
+        <span class="venue"><a href="https://link.springer.com/article/10.1007/s00209-018-2163-5" target="_blank" rel="noopener noreferrer">Mathematische Zeitschrift <b>292</b>, pp.677&ndash;703 (2019)</a>, <span class="note">(published: 2018)</span></span>
+      </li>
+      <li id="annihilator">
+        <em>The class of the affine line is a zero divisor in the Grothendieck ring: via G_2-Grassmannians</em>,<br>
+        <span class="byline">(with Atsushi Ito, Shinnosuke Okawa, and Kazushi Ueda).</span><br>
+        <span class="venue"><a href="https://www.ams.org/journals/jag/2019-28-02/S1056-3911-2018-00731-3/" target="_blank" rel="noopener noreferrer">Journal of Algebraic Geometry <b>28</b>, pp.245&ndash;250 (2019)</a>, <span class="note">(published electronically: 2018)</span></span>
+      </li>
+      <li id="minuscule">
+        <em>Minuscule Schubert varieties and mirror symmetry</em>,<br>
+        <span class="venue"><a href="https://www.emis.de/journals/SIGMA/2017/067/" target="_blank" rel="noopener noreferrer">Symmetry, Integrability and Geometry: Methods and Applications (SIGMA) <b>13</b>, 067, 25 pages (2017)</a></span>
+      </li>
+      <li id="I-function">
+        <em>I-functions of Calabi&ndash;Yau 3-folds in Grassmannians</em>,<br>
+        <span class="byline">(with Daisuke Inoue, and Atsushi Ito).</span><br>
+        <span class="venue"><a href="https://intlpress.com/site/pub/pages/journals/items/cntp/content/vols/0011/0002/a002/index.php" target="_blank" rel="noopener noreferrer">Communications in Number Theory and Physics <b>11</b>, no. 2, pp.273&ndash;309 (2017)</a></span>
+      </li>
+      <li id="seshadri">
+        <em>Seshadri constants and degree of defining polynomials</em>,<br>
+        <span class="byline">(with Atsushi Ito).</span><br>
+        <span class="venue"><a href="https://link.springer.com/article/10.1007/s00208-013-0969-3" target="_blank" rel="noopener noreferrer">Mathematische Annalen <b>358</b>, pp.465&ndash;476 (2014)</a>, <span class="note">(published: 2013)</span></span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ===================== Talks & Documents ===================== -->
+  <section id="documents">
+    <h2><span class="ja">講演・ドキュメント</span><span class="en">Talks &amp; Documents</span></h2>
+    <ul class="list">
+
+      <li id="mathsoc2023" class="ja">
+        <strong>多面体の大域連結性について</strong>,<br>
+        <span class="byline">日本数学会秋季総合分科会, 東北大学, 2023年9月20&ndash;23日.</span>
+        <ul class="inner">
+          <li>講演アブストラクト: <a href="./articles/msj2023_abstract.pdf" target="_blank">PDF</a></li>
+          <li>スライド: <span class="note">PDF</span></li>
+        </ul>
+      </li>
+
+      <li id="mathsoc2022" class="ja">
+        <em>Calabi&ndash;Yau</em> <strong>超曲面の幾何転移</strong>,<br>
+        <span class="byline">日本数学会秋季総合分科会, 北海道大学, 2022年9月15日.</span>
+        <ul class="inner">
+          <li>講演アブストラクト: <a href="./articles/msj2022_abstract.pdf" target="_blank">PDF</a></li>
+          <li>スライド: <a href="./articles/msj2022_slide.pdf" target="_blank">PDF</a></li>
+        </ul>
+      </li>
+
+      <li id="kinosaki2021" class="ja">
+        <strong>カラビ・ヤウ超曲面の幾何転移</strong>,<br>
+        <span class="byline">代数幾何学シンポジウム記録, pp.102&ndash;118, 正誤表連結済み (2023):</span>
+        <a href="./articles/kinosaki2021_concatenated.pdf" target="_blank">PDF</a>
+        <ul class="inner">
+          <li><a href="https://repository.kulib.kyoto-u.ac.jp/dspace/handle/2433/267781" target="_blank" rel="noopener noreferrer">Symposium on algebraic geometry (Kinosaki, 2021), pp.102&ndash;118</a></li>
+          <li>正誤表 (2023): <a href="./articles/kinosaki_erratum.pdf" target="_blank">PDF</a></li>
+        </ul>
+      </li>
+
+      <li id="mathcafe2021" class="ja">
+        <strong>カメラと代数幾何学</strong>,<br>
+        <span class="byline">第33回数学カフェ, 2021年3月7日.</span>
+        <ul class="inner">
+          <li>講演概要: <a href="./articles/mathcafe_abstract.pdf" target="_blank">PDF</a></li>
+          <li>講演ノート (手書き, 2022年7月8日改訂): <a href="./articles/mathcafe_notes.pdf" target="_blank">PDF</a></li>
+        </ul>
+      </li>
+
+      <li id="rims2021" class="ja">
+        <strong>カメラの幾何学と再構成問題</strong>,<br>
+        <span class="venue"><a href="https://miurror.github.io/articles/rims2021.pdf">PDF</a>&nbsp;
+        <a href="https://www.kurims.kyoto-u.ac.jp/~kyodo/kokyuroku/contents/2186.html" target="_blank" rel="noopener noreferrer">数理解析研究所講究録 <b>2186</b>, pp.61&ndash;74 (2021)</a></span>
+      </li>
+
+      <li id="KMS_DMV">
+        <em>Multiview varieties and reconstruction problems</em>,<br>
+        <span class="byline">Joint meeting of the Korean Mathematical Society and the German Mathematical Society, COEX, Seoul, Oct. 6, 2018.</span><br>
+        <span class="venue">slide (revised: Oct. 15, 2018): <a href="./articles/KMS-DMV_slide.pdf" target="_blank">PDF</a></span>
+      </li>
+
+      <li id="kinosaki2014">
+        <em>Linear section Calabi&ndash;Yau threefolds in Hibi toric varieties</em>,<br>
+        <span class="venue"><a href="https://repository.kulib.kyoto-u.ac.jp/dspace/handle/2433/214743" target="_blank" rel="noopener noreferrer">Symposium on algebraic geometry (Kinosaki, 2014), p.125</a></span><br>
+        <span class="venue">poster: <a href="./articles/kinosaki2014.pdf" target="_blank">PDF</a></span>
+      </li>
+
+      <li id="hibi">
+        <em>Hibi toric varieties and mirror symmetry</em>,<br>
+        <span class="byline">PhD Thesis (2013).</span>
+        <ul class="inner">
+          <li>thesis: <a href="./articles/phd_thesis.pdf" target="_blank">PDF</a></li>
+          <li class="ja">論文の内容の要旨: <a href="./articles/phd_thesis_abstract.pdf" target="_blank">PDF</a></li>
+        </ul>
+      </li>
+
+      <li id="kinosaki2011">
+        <em>Mirror symmetry for complete intersection Calabi&ndash;Yau threefolds in Gorenstein minuscule Schubert varieties</em>,<br>
+        <span class="venue"><a href="https://repository.kulib.kyoto-u.ac.jp/dspace/handle/2433/214740" target="_blank" rel="noopener noreferrer">Symposium on algebraic geometry (Kinosaki, 2011), p.158</a></span><br>
+        <span class="venue">poster: <a href="./articles/kinosaki2011.pdf" target="_blank">PDF</a></span>
+      </li>
+
+      <li id="grassmann" class="ja">
+        <em>Grassmann</em> <strong>多様体のトーリック退化とミラー対称性</strong>,<br>
+        <span class="byline">修士論文 (2010):</span> <a href="./articles/master_thesis.pdf" target="_blank">PDF</a>
+      </li>
+
+    </ul>
+  </section>
+
+  <footer>
+    <a class="backtop" href="#top"><span class="ja">トップへ戻る</span><span class="en">Back to top</span></a>
+  </footer>
+
+</div>
+
+<script>
+function toggleLang(){
+  var h=document.documentElement;
+  h.setAttribute('lang',h.getAttribute('lang')==='ja'?'en':'ja');
+}
+</script>
+</body>
 </html>
